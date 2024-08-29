@@ -12,8 +12,13 @@ class Game {
   resize(width, height) {
     this.canvas.width = Math.floor(width)
     this.canvas.height = Math.floor(height)
+    this.ctx.fillStyle = '#ff4500'
     this.width = this.canvas.width
     this.height = this.canvas.height
+    this.render()
+  }
+  render() {  
+    this.ctx.fillRect(200, 100, 100, 150)
   }
 }
 
@@ -24,5 +29,12 @@ window.addEventListener('load', function () {
   canvas.height = window.innerHeight;
   
   const game = new Game(canvas, ctx)
+  game.render()
 
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    game.render()
+    requestAnimationFrame(animate)
+  }
+  requestAnimationFrame(animate)
 })
