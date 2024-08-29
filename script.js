@@ -6,10 +6,15 @@ class Game {
     this.height = this.canvas.height
   
     window.addEventListener('resize', e => {
-      this.canvas.width = e.currentTarget.innerWidth
+      this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
     })
   }
-  resize(width, height)
+  resize(width, height) {
+    this.canvas.width = Math.floor(width)
+    this.canvas.height = Math.floor(height)
+    this.width = this.canvas.width
+    this.height = this.canvas.height
+  }
 }
 
 window.addEventListener('load', function () {
