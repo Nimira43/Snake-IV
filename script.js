@@ -2,23 +2,26 @@ class Game {
   constructor(canvas, context) {
     this.canvas = canvas
     this.ctx = context
-    this.width = this.canvas.width
-    this.height = this.canvas.height
+    this.width
+    this.height
     this.snake = new Snake(this, 0, 0, 0, 1)
     this.cellSize = 50
-    this.columns = Math.floor(this.width / this.cellSize)
-    this.rows = Math.floor(this.height / this.cellSize)
+    this.columns
+    this.rows
 
     window.addEventListener('resize', e => {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
     })
+    this.resize(window.innerWidth, window.innerHeight)
   }
   resize(width, height) {
-    this.canvas.width = Math.floor(width)
-    this.canvas.height = Math.floor(height)
+    this.canvas.width = width - width % this.cellSize
+    this.canvas.height = height - height % this.cellSize
     this.ctx.fillStyle = '#ff4500'
     this.width = this.canvas.width
     this.height = this.canvas.height
+    this.columns = Math.floor(this.width / this.cellSize)
+    this.rows = Math.floor(this.height / this.cellSize)
     this.render()
   }
   drawGrid() {
