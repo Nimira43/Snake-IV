@@ -4,7 +4,7 @@ class Game {
     this.ctx = context
     this.width = this.canvas.width
     this.height = this.canvas.height
-    this.snake = new Snake(this, 0, 0)
+    this.snake = new Snake(this, 0, 0, 0, 1)
   
     window.addEventListener('resize', e => {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
@@ -19,8 +19,8 @@ class Game {
     this.render()
   }
   render() {  
-    this.ctx.fillRect(200, 100, 100, 150)
-    this.snake.draw()
+    // this.snake.update()
+    // this.snake.draw()
   }
 }
 
