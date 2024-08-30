@@ -4,16 +4,22 @@ class Game {
     this.ctx = context
     this.width
     this.height
-    this.snake = new Snake(this, 0, 0, 0, 1)
     this.cellSize = 50
     this.columns
     this.rows
-
+  
+    this.eventTimer = 0
+    this.eventInteval = 200
+    this.eventUpdate = false
+  
+    this.snake = new Snake(this, 0, 0, 0, 1, '#ffffff')
+    
     window.addEventListener('resize', e => {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
     })
     this.resize(window.innerWidth, window.innerHeight)
   }
+
   resize(width, height) {
     this.canvas.width = width - width % this.cellSize
     this.canvas.height = height - height % this.cellSize
@@ -22,8 +28,8 @@ class Game {
     this.height = this.canvas.height
     this.columns = Math.floor(this.width / this.cellSize)
     this.rows = Math.floor(this.height / this.cellSize)
-    this.render()
   }
+
   drawGrid() {
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.columns; x++) {
@@ -31,15 +37,30 @@ class Game {
           x * this.cellSize,
           y * this.cellSize,
           this.cellSize,
-          this.cellSize)
+          this.cellSize
+        )
       }
     }
   }
 
-  render() {
-    this.drawGrid()
-    // this.snake.update()
-    // this.snake.draw()
+  handlePeriodicEvents(deltaTime) {
+    if (this.eventTimer < this.eventInteval) {
+      this.eventTimer += deltaTime
+      this.eventUpdate = false
+    } else {
+      this.eventTimer = 0
+      this.eventUpdate = true
+    }
+  }
+
+  render(deltaTime) {
+    this.handlePeriodicEvents(deltaTime)
+    if (this.eventUpdate) {
+      this.ctx.clearRect(0, 0, this.width, this.height)
+      this.drawGrid()
+      this.snake.draw()
+      this.snake.update()
+    }
   }
 }
 
@@ -52,9 +73,13 @@ window.addEventListener('load', function () {
   const game = new Game(canvas, ctx)
   game.render()
 
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    game.render()
+  let lastTime = 0
+
+  function animate(timeStamp) {
+    const deltaTime = timeStamp - lastTime
+    lastTime = timeStamp
+    
+    game.render(deltaTime)
     requestAnimationFrame(animate)
   }
   requestAnimationFrame(animate)
