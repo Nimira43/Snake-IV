@@ -6,8 +6,8 @@ class Game {
     this.height = this.canvas.height
     this.snake = new Snake(this, 0, 0, 0, 1)
     this.cellSize = 50
-    this.columns = this.width / this.cellSize
-    this.rows = this.height / this.cellSize
+    this.columns = Math.floor(this.width / this.cellSize)
+    this.rows = Math.floor(this.height / this.cellSize)
 
     window.addEventListener('resize', e => {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
