@@ -12,7 +12,10 @@ class Snake {
   }
   
   update() {
-    if (this.x <= 0 && this.speedX < 0) {
+    if (this.x <= 0 && this.speedX < 0 ||
+        this.x >= this.game.columns - 1 && this.speedX > 0 ||
+        this.y <= 0 && this.speedY < 0 ||
+        this.y >= this.game.rows - 1 && this.speedY > 0) {
       this.moving = false
     }
     if (this.moving) {
