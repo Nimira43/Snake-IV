@@ -8,11 +8,20 @@ class Snake {
     this.colour = colour
     this.width = this.game.cellSize
     this.height = this.game.cellSize
+    this.moving = true
   }
+  
   update() {
-    this.x += this.speedX
-    this.y += this.speedY
+    if (this.x <= 0) {
+      this.x += this.speedX
+      this.y += this.speedY
+    }
+    if (moving) {
+      this.x += this.speedX
+      this.y += this.speedY
+    }
   }
+  
   draw() {
     this.game.ctx.fillStyle = this.colour
     this.game.ctx.fillRect(
@@ -29,7 +38,7 @@ class Keyboard1 extends Snake {
     super(game, x, y, speedX, speedY, colour)
     
     window.addEventListener('keydown', e => {
-      
+
     })
   }
 }
