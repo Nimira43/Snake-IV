@@ -12,7 +12,7 @@ class Snake {
   }
   
   update() {
-    if (this.x <= 0) {
+    if (this.x <= 0 && this.speedX < 0) {
       this.moving = false
     }
     if (this.moving) {
@@ -33,20 +33,24 @@ class Snake {
   
   turnUp() {
     this.speedX = 0
-    this.speedY = -1  
+    this.speedY = -1
+    this.moving = true
   }
   
   turnDown() {
     this.speedX = 0
     this.speedY = 1
+    this.moving = true
   }
   turnLeft() {
     this.speedX = -1
     this.speedY = 0
+    this.moving = true
   }
   turnRight() {
     this.speedX = 1
     this.speedY = 0
+    this.moving = true
   }
 }
 
