@@ -12,7 +12,7 @@ class Game {
     this.eventInteval = 200
     this.eventUpdate = false
   
-    this.player1 = new Keyboard2(this, 5, 0, 0, 1, '#ffffff')
+    this.player1 = new Keyboard2(this, 5, 0, 0, 1, '#87ceeb')
     this.player2 = new Keyboard2(this, 5, 0, 0, 1, '#ff4500')
     
     window.addEventListener('resize', e => {
