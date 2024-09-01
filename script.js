@@ -12,7 +12,7 @@ class Game {
     this.eventInteval = 200
     this.eventUpdate = false
   
-    this.snake = new Snake(this, 0, 0, 0, 1, '#ffffff')
+    this.snake = new Keyboard1(this, 0, 0, 0, 1, '#ffffff')
     
     window.addEventListener('resize', e => {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)

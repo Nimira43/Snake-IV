@@ -23,3 +23,13 @@ class Snake {
     )
   }
 }
+
+class Keyboard1 extends Snake {
+  constructor(game, x, y, speedX, speedY, colour) {
+    super(game, x, y, speedX, speedY, colour)
+    
+    window.addEventListener('keydown', e => {
+      
+    })
+  }
+}
