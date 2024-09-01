@@ -13,10 +13,9 @@ class Snake {
   
   update() {
     if (this.x <= 0) {
-      this.x += this.speedX
-      this.y += this.speedY
+      this.moving = false
     }
-    if (moving) {
+    if (this.moving) {
       this.x += this.speedX
       this.y += this.speedY
     }
