@@ -74,10 +74,10 @@ class Keyboard2 extends Snake {
     super(game, x, y, speedX, speedY, colour)
     
     window.addEventListener('keydown', e => {
-      if (e.key.toLowerCase === 'q') this.turnUp()
-      else if (e.key.toLowerCase === 'a') this.turnDown()
-      else if (e.key.toLowerCase === 'r') this.turnLeft()
-      else if (e.key.toLowerCase === 't') this.turnRight()
+      if (e.key.toLowerCase() === 'q') this.turnUp()
+      else if (e.key.toLowerCase() === 'a') this.turnDown()
+      else if (e.key.toLowerCase() === 'r') this.turnLeft()
+      else if (e.key.toLowerCase() === 't') this.turnRight()
     })
   }
 }
