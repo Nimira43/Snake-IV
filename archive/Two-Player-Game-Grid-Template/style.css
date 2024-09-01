@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkgreen;
+}
+
+#canvas1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background: url('./images/grass_night.png');
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.8);
+
+}
