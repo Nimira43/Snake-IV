@@ -12,9 +12,9 @@ class Game {
     this.eventInteval = 200
     this.eventUpdate = false
   
-    this.player1 = new Keyboard2(this, 5, 0, 0, 1, '#87ceeb')
-    this.player2 = new Keyboard2(this, 5, 0, 0, 1, '#ff4500')
-    
+    this.player1 = new Keyboard1(this, 0, 0, 0, 1, '#ff4500')
+    this.player2 = new Keyboard2(this, 5, 0, 0, 1, '#87ceeb')
+    this.gameObjects = [this.player1, this.player2]
     
     window.addEventListener('resize', e => {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
@@ -60,8 +60,10 @@ class Game {
     if (this.eventUpdate) {
       this.ctx.clearRect(0, 0, this.width, this.height)
       this.drawGrid()
-      this.snake.draw()
-      this.snake.update()
+      this.gameObjects.forEach(object => {
+        object.draw()
+        object.update()
+      })
     }
   }
 }
