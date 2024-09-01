@@ -69,6 +69,7 @@ class Keyboard1 extends Snake {
     })
   }
 }
+
 class Keyboard2 extends Snake {
   constructor(game, x, y, speedX, speedY, colour) {
     super(game, x, y, speedX, speedY, colour)
