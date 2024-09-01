@@ -12,9 +12,9 @@ class Game {
     this.eventInteval = 200
     this.eventUpdate = false
   
-    this.player1 = new Keyboard1(this, 0, 0, 0, 1, '#ff4500')
-    this.player2 = new Keyboard2(this, 5, 0, 0, 1, '#87ceeb')
-    this.gameObjects = [this.player1, this.player2]
+    this.player1 
+    this.player2
+    this.gameObjects
     
     window.addEventListener('resize', e => {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
@@ -30,6 +30,9 @@ class Game {
     this.height = this.canvas.height
     this.columns = Math.floor(this.width / this.cellSize)
     this.rows = Math.floor(this.height / this.cellSize)
+    this.player1 = new Keyboard1(this, 0, 0, 1, 0, '#ff4500')
+    this.player2 = new Keyboard2(this, this.columns - 1, 0, 0, 1, '#87ceeb')
+    this.gameObjects = [this.player1, this.player2]
   }
 
   drawGrid() {
