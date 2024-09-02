@@ -32,7 +32,8 @@ class Game {
     this.rows = Math.floor(this.height / this.cellSize)
     this.player1 = new Keyboard1(this, 0, 0, 1, 0, '#ff4500')
     this.player2 = new Keyboard2(this, this.columns - 1, 0, 0, 1, '#87ceeb')
-    this.gameObjects = [this.player1, this.player2]
+    this.player3 = new ComputerAI(this, this.columns - 1, this.rows - 1, -1, 0, '#ffd700')
+    this.gameObjects = [this.player1, this.player2, this.player3]
   }
 
   drawGrid() {

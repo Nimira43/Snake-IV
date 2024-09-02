@@ -88,17 +88,23 @@ class ComputerAI extends Snake {
     super(game, x, y, speedX, speedY, colour)
     this.turnTimer = 0
     this.turnInterval = 5
-    
-
-    // window.addEventListener('keydown', e => {
-    //   if (e.key.toLowerCase() === 'q') this.turnUp()
-    //   else if (e.key.toLowerCase() === 'a') this.turnDown()
-    //   else if (e.key.toLowerCase() === 'r') this.turnLeft()
-    //   else if (e.key.toLowerCase() === 't') this.turnRight()
-    // })
   }
 
   update() {
     super.update()
+    if (this.turnTimer < this.turnInterval) {
+      this.turnTimer += 1
+    } else {
+      this.turnTimer = 0
+      this.turn()
+    }
+  }
+
+  turn() {
+    if (this.speedY === 0) {
+      Math.random() < 0.5 ? this.turnUp() : this.turnDown()
+    } else if (this.speedX === 0) {
+      Math.random() < 0.5 ? this.turnLeft() : this.turnRight()
+    }
   }
 }
