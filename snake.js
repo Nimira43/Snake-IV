@@ -10,6 +10,8 @@ class Snake {
     this.height = this.game.cellSize
     this.moving = true
     this.score = 0
+    this.length = 5
+    this.segments = []
   }
   
   update() {
@@ -26,17 +28,16 @@ class Snake {
     if (this.moving) {
       this.x += this.speedX
       this.y += this.speedY
+      this.segments.unshift({x: this.x, y: this.y})
     }
   }
   
   draw() {
-    this.game.ctx.fillStyle = this.colour
-    this.game.ctx.fillRect(
-      this.x * this.game.cellSize,
-      this.y * this.game.cellSize,
-      this.width,
-      this.height
-    )
+    this.segments.forEach(segment => {
+      this.game.ctx.fillStyle = this.colour
+      this.game.ctx.fillRect(segment.x * this.game.cellSize, segment.y * this.game.cellSize, this.width, this.height)
+    })
+    
   }
   
   turnUp() {
