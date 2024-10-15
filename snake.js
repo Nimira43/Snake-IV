@@ -11,6 +11,7 @@ class Snake {
     this.moving = true
     this.score = 0
     this.length = 5
+    
     this.segments = []
   }
   
