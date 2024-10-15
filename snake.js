@@ -12,6 +12,9 @@ class Snake {
   }
   
   update() {
+    if (this.game.checkCollision(this, this.game.food)) {
+      this.game.food.reset()
+    }
     if (this.x <= 0 && this.speedX < 0 ||
         this.x >= this.game.columns - 1 && this.speedX > 0 ||
         this.y <= 0 && this.speedY < 0 ||
