@@ -1,6 +1,6 @@
 class Food {
   constructor(game) {
-    this.game
+    this.game = game
     this.x
     this.y
     this.reset()
@@ -11,7 +11,7 @@ class Food {
   }
   draw() {
     this.game.ctx.fillStyle = 'white'
-    this.game.ctx.fillRect(this.x, this.y, this.game.cellSize, this.game.cell.Size)
+    this.game.ctx.fillRect(this.x * this.game.cellSize, this.y * this.game.cellSize, this.game.cellSize, this.game.cellSize)
   }
   update() {
 
