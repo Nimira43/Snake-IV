@@ -9,11 +9,13 @@ class Snake {
     this.width = this.game.cellSize
     this.height = this.game.cellSize
     this.moving = true
+    this.score = 0
   }
   
   update() {
     if (this.game.checkCollision(this, this.game.food)) {
       this.game.food.reset()
+      this.score++
     }
     if (this.x <= 0 && this.speedX < 0 ||
         this.x >= this.game.columns - 1 && this.speedX > 0 ||
