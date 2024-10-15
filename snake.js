@@ -29,6 +29,9 @@ class Snake {
       this.x += this.speedX
       this.y += this.speedY
       this.segments.unshift({x: this.x, y: this.y})
+      if (this.segments.length > this.length) {
+        this.segments.pop()
+      }
     }
   }
   
