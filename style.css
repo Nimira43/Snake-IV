@@ -28,7 +28,7 @@ body {
   top: 5px;
   left: 50%;
   translate: -50% 0;
-  padding: 10px;
+  padding: 5px;
   background: #ff4500;
   border-radius: 5px;
 }
@@ -37,12 +37,16 @@ body {
 #debugButton,
 #fullScreenButton {
   font-family: 'Sixtyfour Convergence', system-ui;
-  font-size: 20px;
-  padding: 10px;
-  margin: 10px;
+  font-size: 12px;
+  padding: 5px;
+  margin: 8px;
   border: none;
   border-radius: 5px;
   outline: none;
+  display: flex;
+  width: 160px;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 #startButton {
