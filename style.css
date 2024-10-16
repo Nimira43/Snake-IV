@@ -9,6 +9,7 @@
 body {
   background-color: darkgreen;
   color: #49c0ee;
+  font-family: 'League Spartan', sans-serif;
 }
 
 #canvas1 {
@@ -28,39 +29,38 @@ body {
   top: 5px;
   left: 50%;
   translate: -50% 0;
-  padding: 5px;
-  background: #ff4500;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 5px;
-  border: 2px solid #000;
 }
 
-#startButton,
-#debugButton,
-#fullScreenButton {
-  font-family: 'Sixtyfour Convergence', system-ui;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 5px;
-  margin: 8px;
-  border: 2px solid #000;
-  border-radius: 5px;
-  outline: none;
+#buttons {
+  width: 440px;
   display: flex;
-  width: 160px;
   justify-content: space-between;
-  cursor: pointer;
-  text-shadow: 1px 1px 1px #000;
-  letter-spacing: 1px;
 }
 
-#startButton {
-  background: #4ef14e;
+#buttons button {
+  width: 140px;
+  background: #ff4500;
+  color: #111;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
-#debugButton {
-  background: #eeee21;
+#scoreScreen {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 25px;
 }
 
-#fullScreenButton {
-  background: #5fb6d8
+#scoreScreen > div {
+  border: 1px solid black;
+
 }
