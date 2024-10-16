@@ -55,10 +55,14 @@ body {
 }
 
 #scoreScreen {
+  margin-top: 10px;
   padding: 5px;
   display: flex;
   justify-content: space-between;
   column-gap: 25px;
+  color: #ff4500;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 #scoreScreen > div {

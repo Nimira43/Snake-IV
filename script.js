@@ -18,7 +18,7 @@ class Game {
     this.player4
     this.food
     this.gameObjects
-    this.game.Ui = new Ui(this)
+    this.gameUi = new Ui(this)
     
     window.addEventListener('resize', e => {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
@@ -89,6 +89,7 @@ class Game {
       })
       this.drawStatusText()
     }
+    this.gameUi.update()
   }
 }
 
