@@ -10,7 +10,7 @@ class Snake {
     this.height = this.game.cellSize
     this.moving = true
     this.score = 0
-    this.length = 5
+    this.length = 2
     this.segments = []
   }
   
@@ -18,6 +18,7 @@ class Snake {
     if (this.game.checkCollision(this, this.game.food)) {
       this.game.food.reset()
       this.score++
+      this.length++
     }
     if (this.x <= 0 && this.speedX < 0 ||
         this.x >= this.game.columns - 1 && this.speedX > 0 ||
