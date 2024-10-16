@@ -12,9 +12,11 @@ class Snake {
     this.score = 0
     this.length = 2
     this.segments = []
+    this.readyToTurn = true
   }
   
   update() {
+    this.readyToTurn = true
     if (this.game.checkCollision(this, this.game.food)) {
       this.game.food.reset()
       this.score++
@@ -41,30 +43,43 @@ class Snake {
       if (i === 0) this.game.ctx.fillStyle = 'black'
       else this.game.ctx.fillStyle = this.colour
       this.game.ctx.fillRect(segment.x * this.game.cellSize, segment.y * this.game.cellSize, this.width, this.height)
-    })
-    
+    })  
   }
   
   turnUp() {
-    this.speedX = 0
-    this.speedY = -1
-    this.moving = true
+    if (this.speedY === 0 && this.readyToTurn) {
+      this.speedX = 0
+      this.speedY = -1
+      this.moving = true
+      this.readyToTurn = false
+    }
   }
   
   turnDown() {
-    this.speedX = 0
-    this.speedY = 1
-    this.moving = true
+    if (this.speedY === 0 && this.readyToTurn) {
+      this.speedX = 0
+      this.speedY = 1
+      this.moving = true
+      this.readyToTurn = false
+    }
   }
+  
   turnLeft() {
-    this.speedX = -1
-    this.speedY = 0
-    this.moving = true
+    if (this.speedX === 0 && this.readyToTurn) {
+      this.speedX = -1
+      this.speedY = 0
+      this.moving = true
+      this.readyToTurn = false    
+    }
   }
+
   turnRight() {
-    this.speedX = 1
-    this.speedY = 0
-    this.moving = true
+    if (this.speedX === 0 && this.readyToTurn) {
+      this.speedX = 1
+      this.speedY = 0
+      this.moving = true
+      this.readyToTurn = false    
+    }
   }
 }
 
