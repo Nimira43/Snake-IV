@@ -8,5 +8,8 @@ class Ui {
   }
   update() {
     this.scoreBoard1.innerText = 'P1: ' + this.game.player1.score 
+    this.scoreBoard2.innerText = 'P2: ' + this.game.player2.score 
+    this.scoreBoard3.innerText = 'P2: ' + this.game.player3.score 
+    this.scoreBoard4.innerText = 'P2: ' + this.game.player4.score 
   }
 }

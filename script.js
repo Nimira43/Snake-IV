@@ -57,13 +57,6 @@ class Game {
     }
   }
 
-  drawStatusText() {
-    this.ctx.fillText('P1: ' + this.player1.score, this.cellSize, this.cellSize)
-    this.ctx.fillText('P2: ' + this.player2.score, this.cellSize, this.cellSize * 2)
-    this.ctx.fillText('P3: ' + this.player3.score, this.cellSize, this.cellSize * 3)
-    this.ctx.fillText('P4: ' + this.player4.score, this.cellSize, this.cellSize * 4)
-  }
-
   checkCollision(a, b) {
     return a.x === b.x && a.y === b.y
   }
