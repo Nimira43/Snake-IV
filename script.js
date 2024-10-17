@@ -87,7 +87,6 @@ class Game {
         object.draw()
         object.update()
       })
-      this.drawStatusText()
     }
     this.gameUi.update()
   }
