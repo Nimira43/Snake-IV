@@ -1,5 +1,5 @@
 class Snake {
-  constructor(game, x, y, speedX, speedY, colour) {
+  constructor(game, x, y, speedX, speedY, colour, name) {
     this.game = game
     this.x = x
     this.y = y
@@ -13,6 +13,7 @@ class Snake {
     this.length = 2
     this.segments = []
     this.readyToTurn = true
+    this.name = name
   }
   
   update() {
@@ -84,8 +85,8 @@ class Snake {
 }
 
 class Keyboard1 extends Snake {
-  constructor(game, x, y, speedX, speedY, colour) {
-    super(game, x, y, speedX, speedY, colour)
+  constructor(game, x, y, speedX, speedY, colour, name) {
+    super(game, x, y, speedX, speedY, colour, name)
     
     window.addEventListener('keydown', e => {
       if (e.key === 'ArrowUp') this.turnUp()
@@ -97,8 +98,8 @@ class Keyboard1 extends Snake {
 }
 
 class Keyboard2 extends Snake {
-  constructor(game, x, y, speedX, speedY, colour) {
-    super(game, x, y, speedX, speedY, colour)
+  constructor(game, x, y, speedX, speedY, colour, name) {
+    super(game, x, y, speedX, speedY, colour, name)
     
     window.addEventListener('keydown', e => {
       if (e.key.toLowerCase() === 'q') this.turnUp()
@@ -110,8 +111,8 @@ class Keyboard2 extends Snake {
 }
 
 class ComputerAI extends Snake {
-  constructor(game, x, y, speedX, speedY, colour) {
-    super(game, x, y, speedX, speedY, colour)
+  constructor(game, x, y, speedX, speedY, colour, name) {
+    super(game, x, y, speedX, speedY, colour, name)
     this.turnTimer = 0
     this.turnInterval = Math.floor(Math.random() * this.game.columns + 1)
   }
