@@ -36,7 +36,7 @@ class Game {
     this.height = this.canvas.height
     this.columns = Math.floor(this.width / this.cellSize)
     this.rows = Math.floor(this.height / this.cellSize)
-    this.player1 = new Keyboard1(this, 0, 0, 1, 0, '#ff4500', 'Nick')
+    this.player1 = new ComputerAI(this, 0, 0, 1, 0, '#ff4500', 'Nick')
     this.player2 = new ComputerAI(this, this.columns - 1, 0, 0, 1, '#49c0ee', 'Lenny')
     this.player3 = new ComputerAI(this, this.columns - 1, this.rows - 1, -1, 0, '#ffd700', 'Billy')
     this.player4 = new ComputerAI(this, 0, this.rows - 1, 0, -1, '#18ff45', 'NT Bot')
