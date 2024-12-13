@@ -32,7 +32,7 @@ body {
   padding: 10px;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
-  border: 3px solid #ff4500;
+  border: 3px solid #fffaf0;
   box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.8),
               10px -10px 40px rgba(0, 0, 0, 0.8);
 }
@@ -46,7 +46,7 @@ body {
 
 #buttons button {
   width: 140px;
-  background: #ff4500;
+  background: #fffaf0;
   color: #111;
   outline: none;
   border: none;
@@ -63,7 +63,7 @@ body {
   display: flex;
   justify-content: space-between;
   column-gap: 25px;
-  color: #ff4500;
+  color: #fffaf0;
   font-weight: 500;
   text-transform: uppercase;
 }
