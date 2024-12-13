@@ -76,3 +76,29 @@ body {
 .scoreBoard {
   padding: 8px 6px;
 }
+
+#playerChoice {
+  margin-top: 10px;;
+}
+
+.playerLabel {
+  color: #fffaf0;
+}
+
+.player1, .player2,
+.player3, .player4 {
+  padding: 2px;
+}
+
+label {
+  color: #fffaf0;
+}
+
+select {
+  color: #fffaf0;
+  background-color: transparent;
+}
+
+option {
+  color: #111;
+}
