@@ -30,11 +30,10 @@ body {
   left: 50%;
   translate: -50% 0;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   border: 3px solid #fffaf0;
-  box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.8),
-              10px -10px 40px rgba(0, 0, 0, 0.8);
+  
 }
 
 #buttons {
@@ -46,13 +45,13 @@ body {
 
 #buttons button {
   width: 140px;
-  background: #fffaf0;
+  background: rgba(255, 250, 240, 0.7);
   color: #111;
   outline: none;
   border: none;
   border-radius: 5px;
   padding: 8px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -69,5 +68,11 @@ body {
 }
 
 #scoreScreen > div {
-  border: 1px solid black;
+  border: 2px solid #fffaf0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.scoreBoard {
+  padding: 8px 6px;
 }
