@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkgreen;
+  color: #49c0ee;
+  font-family: 'League Spartan', sans-serif;
+}
+
+#canvas1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background: url('./images/others/grass_night.png');
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.8),
+              10px -10px 40px rgba(0, 0, 0, 0.8);
+}
+
+#controls {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  translate: -50% 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  border: 3px solid #fffaf0;
+  
+}
+
+#buttons {
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#buttons button {
+  width: 140px;
+  background: rgba(255, 250, 240, 0.7);
+  color: #111;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#scoreScreen {
+  margin-top: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 25px;
+  color: #fffaf0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#scoreScreen > div {
+  border: 2px solid #fffaf0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.scoreBoard {
+  padding: 8px 6px;
+}
+
+#playerChoice {
+  margin-top: 10px;;
+}
+
+.playerLabel {
+  color: #fffaf0;
+}
+
+.player1, .player2,
+.player3, .player4 {
+  padding: 2px;
+}
+
+label {
+  color: #fffaf0;
+}
+
+select {
+  color: #fffaf0;
+  background-color: transparent;
+}
+
+option {
+  color: #111;
+}

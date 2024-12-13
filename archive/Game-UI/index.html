@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/billy.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Snake-IV</title>
+</head>
+<body>
+  <canvas id="canvas1"></canvas>
+  <div id="controls">
+    <div id="buttons">
+      <button id="startButton">Start</button>
+      <button id="debugButton">Debug</button>
+      <button id="fullScreenButton">Full Screen</button>
+    </div>
+    <div id="scoreScreen">
+      <div class="left">
+        <p id="scoreBoard1" class="scoreBoard">Player 1</p>
+        <p id="scoreBoard2" class="scoreBoard">Player 2</p>
+      </div>
+      <div class="right">
+        <p id="scoreBoard3" class="scoreBoard">Player 3</p>
+        <p id="scoreBoard4" class="scoreBoard">Player 4</p>
+      </div>
+    </div>
+    <div id="gameMenu">
+      <div id="playerChoice">
+        <div class="player1">
+          <p class="playerLabel">Player 1</p>
+          <label for="player1Controls">Controls</label>
+          <select name="player1Controls" id="player1Controls">
+            <option value="arrows">Keyboard Arrows</option>
+            <option value="ai">Computer AI</option>
+          </select>
+        </div>
+        <div class="player2">
+          <p class="playerLabel">Player 2</p>
+          <label for="player2Controls">Controls</label>
+          <select name="player2Controls" id="player2Controls">
+            <option value="arrows">Keyboard QART</option>
+            <option value="ai">Computer AI</option>
+          </select>
+        </div>
+        <div class="player3">
+          <p class="playerLabel">Player 3</p>
+          <label for="player3Controls">Controls</label>
+          <select name="player3Controls" id="player3Controls">
+            <option value="ai">Computer AI</option>
+          </select>
+        </div>
+        <div class="player4">
+          <p class="playerLabel">Player 4</p>
+          <label for="player3Controls">Controls</label>
+          <select name="player3Controls" id="player3Controls">
+            <option value="ai">Computer AI</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="ui.js"></script>
+  <script src="food.js"></script>
+  <script src="snake.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
