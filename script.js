@@ -7,6 +7,7 @@ class Game {
     this.cellSize = 50
     this.columns
     this.rows
+    this.topMargin = 2
   
     this.eventTimer = 0
     this.eventInteval = 200
