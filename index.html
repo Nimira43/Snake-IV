@@ -8,74 +8,72 @@
   <title>Snake-IV</title>
 </head>
 <body>
-  <canvas id="canvas-1"></canvas>
-  <div id="control">
-    <div id="buttons">
-      <button id="start-btn">Start</button>
-      <button id="debug-btn">Debug</button>
-      <button id="full-screen-btn">Full Screen</button>
+  <canvas id="canvas1" class="canvas-1"></canvas>
+  
+  <div id="controls" class="controls">
+    
+    <div id="buttons" class="buttons">
+      <button id="startButton">Start</button>
+      <button id="debugButton">Debug</button>
+      <button id="fullScreenButton">Full Screen</button>
     </div>
-    <div id="score-screen">
+    
+    <div id="scoreScreen" class="score-screen">
       <div class="left">
-        <p id="scoreboard-1">Player 1</p>
-        <p id="scoreboard-2">Player 2</p>
+        <p id="scoreBoard1" class="score-board">Player 1</p>
+        <p id="scoreBoard2" class="score-board">Player 2</p>
       </div>
       <div class="right">
-        <p id="scoreboard-3">Player 3</p>
-        <p id="scoreboard-4">Player 4</p>
+        <p id="scoreBoard3" class="score-board">Player 3</p>
+        <p id="scoreBoard4" class="score-board">Player 4</p>
       </div>
     </div>
-    <div id="game-menu">
-      <div id="player-choice">
-        <div class="player-1">
-          <p class="player-label">Player 1</p>
-          <label for="player-1-controls">Controls</label>
-          <select name="player-1-controls" id="player-1-controls">
-            <option value="arrows">Keyboard Arrows</option>
-            <option value="ai">Computer AI</option>
-          </select>
-          <div>
-            <label for="player-1-name">Name:</label>
-            <input type="text" id="player-1-name">
+    
+    <div id="gameMenu" class='game-menu'>
+      
+      <div id="playerChoice" class="player-choice">
+        
+        <div class="player-choice-left">
+          <div class="player1">
+            <p class="player-label">Player 1</p>
+            <label for="player1Controls">Controls</label>
+            <select name="player1Controls" class="player-controls" id="player1Controls">
+              <option value="arrows">Keyboard Arrows</option>
+              <option value="ai">Computer AI</option>
+            </select>
+          </div>
+          <div class="player2">
+            <p class="player-label">Player 2</p>
+            <label for="player2Controls">Controls</label>
+            <select name="player2Controls" class="player-controls" id="player2Controls">
+              <option value="arrows">Keyboard QART</option>
+              <option value="ai">Computer AI</option>
+            </select>
           </div>
         </div>
-        <div class="player-2">
-          <p class="player-label">Player 2</p>
-          <label for="player-2-controls">Controls</label>
-          <select name="player-2-controls" id="player-2-controls">
-            <option value="wsad">Keyboard WSAD</option>
-            <option value="ai">Computer AI</option>
-          </select>
-          <div>
-            <label for="player-2-name">Name:</label>
-            <input type="text" id="player-2-name">
+        
+        <div class="player-choice-right">
+          <div class="player3">
+            <p class="player-label">Player 3</p>
+            <label for="player3Controls">Controls</label>
+            <select name="player3Controls" class="player-controls" id="player3Controls">
+              <option value="ai">Computer AI</option>
+            </select>
+          </div>
+          <div class="player4">
+            <p class="player-label">Player 4</p>
+            <label for="player4Controls">Controls</label>
+            <select name="player4Controls" class="player-controls" id="player4Controls">
+              <option value="ai">Computer AI</option>
+            </select>
           </div>
         </div>
-        <div class="player-3">
-          <p class="player-label">Player 3</p>
-          <label for="player-3-controls">Controls</label>
-          <select name="player-3-controls" id="player-3-controls">
-            <option value="ai">Computer AI</option>
-          </select>
-          <div>
-            <label for="player-3-name">Name:</label>
-            <input type="text" id="player-3-name">
-          </div>
-        </div>
-        <div class="player-4">
-          <p class="player-label">Player 4</p>
-          <label for="player-4-controls">Controls</label>
-          <select name="player-4-controls" id="player-4-controls">
-            <option value="ai">Computer AI</option>
-          </select>
-          <div>
-            <label for="player-4-name">Name:</label>
-            <input type="text" id="player-4-name">
-          </div>
-        </div>
+        
       </div>
+    
     </div>
-  </div>  
+  
+  </div>
   
   <script src="ui.js"></script>
   <script src="food.js"></script>
