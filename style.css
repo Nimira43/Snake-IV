@@ -39,7 +39,7 @@ body {
 }
 
 .buttons {
-  width: 350px;
+  width: 320px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -47,7 +47,7 @@ body {
 }
 
 .buttons button {
-  width: 100px;
+  width: 90px;
   background: transparent;
   color: var(--light);
   outline: none;
@@ -77,7 +77,6 @@ body {
 }
 
 .player-choice {
-  margin-top: 10px;
   display: flex;
   justify-content: space-between
 }
@@ -87,7 +86,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   flex-wrap: wrap;
 }
 
