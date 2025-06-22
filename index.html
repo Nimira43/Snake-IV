@@ -8,8 +8,24 @@
   <title>Snake-IV</title>
 </head>
 <body>
-  <canvas id="canvas1" class="canvas-1"></canvas>
-  
+  <canvas id="canvas-1"></canvas>
+  <div id="control">
+    <div id="buttons">
+      <button id="start-btn">Start</button>
+      <button id="debug-btn">Debug</button>
+      <button id="full-screen-btn">Full Screen</button>
+    </div>
+    <div id="score-screen">
+      <div class="left">
+        <p id="scoreboard-1">Player 1</p>
+        <p id="scoreboard-2">Player 2</p>
+      </div>
+      <div class="right">
+        <p id="scoreboard-3">Player 3</p>
+        <p id="scoreboard-4">Player 4</p>
+      </div>
+    </div>
+  </div>  
   
   <script src="ui.js"></script>
   <script src="food.js"></script>

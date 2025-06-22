@@ -1,10 +1,10 @@
 class Ui {
   constructor(game) {
     this.game = game;
-    this.scoreBoard1 = document.getElementById('scoreBoard1')
-    this.scoreBoard2 = document.getElementById('scoreBoard2')
-    this.scoreBoard3 = document.getElementById('scoreBoard3')
-    this.scoreBoard4 = document.getElementById('scoreBoard4')
+    this.scoreBoard1 = document.getElementById('scoreboard-1')
+    this.scoreBoard2 = document.getElementById('scoreboard-2')
+    this.scoreBoard3 = document.getElementById('scoreboard-3')
+    this.scoreBoard4 = document.getElementById('scoreboard-4')
   }
   update() {
     this.scoreBoard1.innerText = this.game.player1.name + ' - ' + this.game.player1.score 
