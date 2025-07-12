@@ -89,8 +89,9 @@ class Game {
 
   render(deltaTime) {
     this.handlePeriodicEvents(deltaTime)
-    if (this.eventUpdate) {
+    if (this.eventUpdate && !this.gameOver) {
       this.ctx.clearRect(0, 0, this.width, this.height)
+      this.background.draw()
       this.drawGrid()
       this.gameObjects.forEach(object => {
         object.draw()
