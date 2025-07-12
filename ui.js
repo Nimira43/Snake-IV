@@ -5,6 +5,12 @@ class Ui {
     this.scoreBoard2 = document.getElementById('scoreBoard2')
     this.scoreBoard3 = document.getElementById('scoreBoard3')
     this.scoreBoard4 = document.getElementById('scoreBoard4')
+    this.gameMenu = document.getElementById('gameMenu')
+    this.gameOverScreen = document.getElementById('gameOverScreen')
+    this.startButton = document.getElementById('startButton')
+    this.startButton = addEventListener('click', () => {
+      this.game.start()
+    })
   }
   update() {
     this.scoreBoard1.innerText = this.game.player1.name + ' - ' + this.game.player1.score 
