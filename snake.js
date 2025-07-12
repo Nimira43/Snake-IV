@@ -10,7 +10,7 @@ class Snake {
     this.height = this.game.cellSize
     this.moving = true
     this.score = 0
-    this.length = 2
+    this.length = 3
     this.segments = []
     this.readyToTurn = true
     this.name = name
@@ -25,7 +25,7 @@ class Snake {
     }
     if (this.x <= 0 && this.speedX < 0 ||
         this.x >= this.game.columns - 1 && this.speedX > 0 ||
-        this.y <= 0 && this.speedY < 0 ||
+        this.y <= this.game.topMargin && this.speedY < 0 ||
         this.y >= this.game.rows - 1 && this.speedY > 0) {
       this.moving = false
     }
@@ -36,6 +36,10 @@ class Snake {
       if (this.segments.length > this.length) {
         this.segments.pop()
       }
+    }
+
+    if (this.score >= this.game.winningScore) {
+      this.game.gameUi.triggerGameOver()
     }
   }
   
