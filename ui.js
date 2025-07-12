@@ -8,7 +8,7 @@ class Ui {
     this.gameMenu = document.getElementById('gameMenu')
     this.gameOverScreen = document.getElementById('gameOverScreen')
     this.startButton = document.getElementById('startButton')
-    this.startButton = addEventListener('click', () => {
+    this.startButton.addEventListener('click', () => {
       this.game.start()
     })
   }

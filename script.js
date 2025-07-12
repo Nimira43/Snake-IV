@@ -50,7 +50,7 @@ class Game {
     } else {
       this.gameOver = false
       this.gameUi.gameplayUi()
-      this.player1 = new Keyboard1(this, this.topMargin, 1, 0, '#ff4500', 'Nick')
+      this.player1 = new Keyboard1(this, 0, this.topMargin, 1, 0, '#ff4500', 'Nick')
       this.player2 = new ComputerAI(this, this.columns - 1, this.topMargin, 0, 1, '#49c0ee', 'Lenny')
       this.player3 = new ComputerAI(this, this.columns - 1, this.rows - 1, -1, 0, '#ffd700', 'Billy')
       this.player4 = new ComputerAI(this, 0, this.rows - 1, 0, -1, '#18ff45', 'Nimira')
