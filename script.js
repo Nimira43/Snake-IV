@@ -97,8 +97,8 @@ class Game {
         object.draw()
         object.update()
       })
+      this.gameUi.update()
     }
-    this.gameUi.update()
   }
 }
 
@@ -109,7 +109,6 @@ window.addEventListener('load', function () {
   canvas.height = window.innerHeight;
   
   const game = new Game(canvas, ctx)
-  game.render()
 
   let lastTime = 0
 
