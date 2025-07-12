@@ -32,7 +32,7 @@ class Ui {
   }
 
   gameOverUi() {
-    this.gameMenu.style.display ='block'
+    this.gameMenu.style.display = 'block'
     this.startButton.innerText = 'Start'
     this.gameOverScreen.style.display = 'block'
   }
