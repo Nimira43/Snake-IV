@@ -9,6 +9,8 @@ class Background {
     this.repeats = this.game.width / this.width
   }
   draw() {
-    
+    for (let i = 0; i < this.repeats; i++) {
+      this.game.ctx.drawImage(this.image, this.x + i * this.width, this.y, this.width, this.height)
+    }
   }
 }
