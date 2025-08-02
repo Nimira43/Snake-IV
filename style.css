@@ -62,6 +62,7 @@ body {
   display: flex;
   justify-content: space-between;
   column-gap: 25px;
+  width: 300px;
 }
 
 #playerChoice {
