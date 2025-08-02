@@ -138,9 +138,54 @@ class Snake {
     } else {
       if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
         segment.frameX = 1
-        segment.frameY = 1
-      
-    }
+        segment.frameY = 1  
+    } else if (prevSegment.x < segment.x && nextSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 0  
+    } else if (prevSegment.y < segment.y && nextSegment.y > segment.y) {
+        segment.frameX = 1
+        segment.frameY = 3  
+    } else if (nextSegment.y < segment.y && prevSegment.y > segment.y) {
+        segment.frameX = 0
+        segment.frameY = 3  
+    } 
+    } if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1  
+    } 
+    } if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1  
+    } 
+    } if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1  
+    } 
+    } if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1  
+    } 
+    } if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1  
+    } 
+    } if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1  
+    } 
+    } if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1  
+    } 
+    } if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1  
+    } 
+    } if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1  
+    } 
+    
   }
 }
 
