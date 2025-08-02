@@ -106,6 +106,13 @@ class Snake {
     const segment = this.segments[index]
     const prevSegment = this.segments[index - 1] || 0
     const nextSegment = this.segments[index + 1] || 0
+
+    if (index === 0) {
+      if (segment.y < nextSegment.y) {
+        segment.frameX = 1
+        segment.frameY = 2
+      }
+    }
   }
 }
 
