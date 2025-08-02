@@ -63,6 +63,7 @@ body {
   justify-content: space-between;
   column-gap: 25px;
   width: 300px;
+  margin-top: 1.5rem;
 }
 
 #playerChoice {
