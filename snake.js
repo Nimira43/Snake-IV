@@ -135,6 +135,11 @@ class Snake {
         segment.frameX = 0
         segment.frameY = 1
       }
+    } else {
+      if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
+        segment.frameX = 1
+        segment.frameY = 1
+      
     }
   }
 }
