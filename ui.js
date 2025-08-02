@@ -19,6 +19,10 @@ class Ui {
     this.debugButton.addEventListener('click', () => {
       this.game.debug = !this.game.debug
     })
+    this.player1controls = document.getElementById('player1controls')
+    this.player2controls = document.getElementById('player2controls')
+    this.player3controls = document.getElementById('player3controls')
+    this.player4controls = document.getElementById('player4controls')
   }
 
   update() {
