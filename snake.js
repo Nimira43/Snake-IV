@@ -21,6 +21,9 @@ class Snake {
 
     this.readyToTurn = true
     this.name = name
+    this.image = document.getElementById('snake_corgi')
+    this.spriteWidth = 200
+    this.spriteHeight = 200
   }
   
   update() {
