@@ -139,42 +139,43 @@ class Snake {
       if (nextSegment.x < segment.x && prevSegment.x > segment.x) {
         segment.frameX = 1
         segment.frameY = 1  
-    } else if (prevSegment.x < segment.x && nextSegment.x > segment.x) {
-        segment.frameX = 1
-        segment.frameY = 0  
-    } else if (prevSegment.y < segment.y && nextSegment.y > segment.y) {
-        segment.frameX = 1
-        segment.frameY = 3  
-    } else if (nextSegment.y < segment.y && prevSegment.y > segment.y) {
-        segment.frameX = 0
-        segment.frameY = 3  
-    } else if (prevSegment.x < segment.x && nextSegment.y > segment.y) {
-        segment.frameX = 4
-        segment.frameY = 0  
-    } else if (prevSegment.y > segment.y && nextSegment.x > segment.x) {
-        segment.frameX = 3
-        segment.frameY = 0  
-    } else if (prevSegment.x > segment.x && nextSegment.y < segment.y) {
-        segment.frameX = 3
-        segment.frameY = 1  
-    } else if (prevSegment.y < segment.y && nextSegment.x < segment.x) {
-        segment.frameX = 4
-        segment.frameY = 1  
-    } else if (nextSegment.x < segment.x && prevSegment.y > segment.y) {
-        segment.frameX = 3
+      } else if (prevSegment.x < segment.x && nextSegment.x > segment.x) {
+          segment.frameX = 1
+          segment.frameY = 0  
+      } else if (prevSegment.y < segment.y && nextSegment.y > segment.y) {
+          segment.frameX = 1
+          segment.frameY = 3  
+      } else if (nextSegment.y < segment.y && prevSegment.y > segment.y) {
+          segment.frameX = 0
+          segment.frameY = 3  
+      } else if (prevSegment.x < segment.x && nextSegment.y > segment.y) {
+          segment.frameX = 4
+          segment.frameY = 0  
+      } else if (prevSegment.y > segment.y && nextSegment.x > segment.x) {
+          segment.frameX = 3
+          segment.frameY = 0  
+      } else if (prevSegment.x > segment.x && nextSegment.y < segment.y) {
+          segment.frameX = 3
+          segment.frameY = 1  
+      } else if (prevSegment.y < segment.y && nextSegment.x < segment.x) {
+          segment.frameX = 4
+          segment.frameY = 1  
+      } else if (nextSegment.x < segment.x && prevSegment.y > segment.y) {
+          segment.frameX = 3
+          segment.frameY = 2  
+      } else if (nextSegment.y < segment.y && prevSegment.x < segment.x) {
+          segment.frameX = 3
+          segment.frameY = 3  
+      } else if (nextSegment.x > segment.x && prevSegment.y < segment.y) {
+          segment.frameX = 2
+          segment.frameY = 3  
+      } else if (nextSegment.y > segment.y && prevSegment.x > segment.x) {
+          segment.frameX = 2
+          segment.frameY = 2  
+      } else {
+        segment.frameX = 6
         segment.frameY = 2  
-    } else if (nextSegment.y < segment.y && prevSegment.x < segment.x) {
-        segment.frameX = 3
-        segment.frameY = 3  
-    } else if (nextSegment.x > segment.x && prevSegment.y < segment.y) {
-        segment.frameX = 2
-        segment.frameY = 3  
-    } else if (nextSegment.y > segment.y && prevSegment.x > segment.x) {
-        segment.frameX = 2
-        segment.frameY = 2  
-    } else {
-      segment.frameX = 6
-      segment.frameY = 2  
+      }
     }
   }
 }
