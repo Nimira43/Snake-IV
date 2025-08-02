@@ -210,7 +210,7 @@ class ComputerAI extends Snake {
   constructor(game, x, y, speedX, speedY, colour, name) {
     super(game, x, y, speedX, speedY, colour, name)
     this.turnTimer = 0
-    this.turnInterval = Math.floor(Math.random() * this.game.columns + 1)
+    this.turnInterval
   }
 
   update() {
