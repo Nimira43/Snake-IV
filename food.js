@@ -3,6 +3,7 @@ class Food {
     this.game = game
     this.x
     this.y
+    this.image = document.getElementById('magic_berry1')
     this.reset()
   }
   reset() {
