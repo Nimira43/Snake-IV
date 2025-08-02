@@ -23,6 +23,10 @@ class Ui {
     this.player2controls = document.getElementById('player2controls')
     this.player3controls = document.getElementById('player3controls')
     this.player4controls = document.getElementById('player4controls')
+    this.player1name = document.getElementById('player1name')
+    this.player2name = document.getElementById('player2name')
+    this.player3name = document.getElementById('player3name')
+    this.player4name = document.getElementById('player4name')
   }
 
   update() {
