@@ -12,6 +12,13 @@ class Snake {
     this.score = 0
     this.length = 3
     this.segments = []
+
+    for (let i = 0; i < this.length; i++) {
+      this.x += this.speedX
+      this.y += this.speedY
+      this.segments.unshift({x: this.x, y: this.y, frameX: 5, frameY: 0})
+    }
+
     this.readyToTurn = true
     this.name = name
   }
