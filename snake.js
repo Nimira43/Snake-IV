@@ -61,7 +61,7 @@ class Snake {
         this.game.ctx.fillRect(segment.x * this.game.cellSize, segment.y * this.game.cellSize, this.width, this.height)
       }
       this.setSpriteFrame(i)
-      this.game.ctx.drawImage = (this.image,
+      this.game.ctx.drawImage(this.image,
       segment.frameX * this.spriteWidth, segment.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, segment.x * this.game.cellSize, segment.y * this.game.cellSize, this.width, this.height)     
     })  
   }
