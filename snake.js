@@ -220,7 +220,7 @@ class ComputerAI extends Snake {
     } else {
       this.turnTimer = 0
       this.turn()
-      this.turnInterval = Math.floor(Math.random() * this.game.columns + 1)
+      this.turnInterval = Math.floor(Math.random() * 8) + 1
     }
   }
 
