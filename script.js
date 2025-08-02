@@ -56,8 +56,27 @@ class Game {
     if (this.gameUi.player1controls.value === 'arrows') {
       this.player1 = new Keyboard1(this, 0, this.topMargin, 1, 0, '#ff4500', name)
     } else {
-      this.player1 = new Keyboard1(this, 0, this.topMargin, 1, 0, '#ff4500', name)
+      this.player1 = new ComputerAi(this, 0, this.topMargin, 1, 0, '#ff4500', name)
     }
+  }
+  
+  initPlayer2() {
+    const name = this.gameUi.player2name.value
+    if (this.gameUi.player2controls.value === 'arrows') {
+      this.player2 = new Keyboard2(this, this.columns - 1, this.topMargin, 0, 1, '#49c0ee', name)
+    } else {
+      this.player2 = new ComputerAi(this, this.columns - 1, this.topMargin, 0, 1, '#49c0ee', name)
+    }
+  }
+  
+  initPlayer3() {
+    const name = this.gameUi.player3name.value
+      this.player3 = new ComputerAi(this, this.columns - 1, this.rows - 1, -1, 0, '#ffd700', name)      
+  }
+
+  initPlayer4() {
+    const name = this.gameUi.player4name.value
+    this.player4 = new ComputerAi(this, 0, this.rows - 1, 0, -1, '#18ff45', name)
   }
 
   start() {
@@ -67,9 +86,8 @@ class Game {
       this.gameOver = false
       this.gameUi.gameplayUi()
       
-      this.player2 = new ComputerAI(this, this.columns - 1, this.topMargin, 0, 1, '#49c0ee', 'Lenny')
-      this.player3 = new ComputerAI(this, this.columns - 1, this.rows - 1, -1, 0, '#ffd700', 'Billy')
-      this.player4 = new ComputerAI(this, 0, this.rows - 1, 0, -1, '#18ff45', 'Nimira')
+      
+      
       this.food = new Food(this)
       this.gameObjects = [this.player1, this.player2, this.player3, this.player4, this.food]
       this.ctx.clearRect(0, 0, this.width, this.height)

@@ -206,7 +206,7 @@ class Keyboard2 extends Snake {
   }
 }
 
-class ComputerAI extends Snake {
+class ComputerAi extends Snake {
   constructor(game, x, y, speedX, speedY, colour, name) {
     super(game, x, y, speedX, speedY, colour, name)
     this.turnTimer = 0
