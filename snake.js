@@ -101,6 +101,12 @@ class Snake {
       this.readyToTurn = false    
     }
   }
+
+  setSpriteFrame(index) {
+    const segment = this.segments[index]
+    const prevSegment = this.segments[index - 1] || 0
+    const nextSegment = this.segments[index + 1] || 0
+  }
 }
 
 class Keyboard1 extends Snake {
