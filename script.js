@@ -35,6 +35,7 @@ class Game {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
     })
     this.resize(window.innerWidth, window.innerHeight)
+    this.start()
   }
 
   resize(width, height) {
@@ -48,6 +49,13 @@ class Game {
     this.columns = Math.floor(this.width / this.cellSize)
     this.rows = Math.floor(this.height / this.cellSize)
     this.background = new Background(this)
+  }
+
+  initPlayer1() {
+    const name = this.gameUi.player1name.value
+    if (this.gameUi.player1controls.value === 'arrows') {
+      
+    }
   }
 
   start() {
