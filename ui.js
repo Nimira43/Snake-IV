@@ -15,6 +15,10 @@ class Ui {
     this.fullScreenButton.addEventListener('click', () => {
       this.game.toggleFullScreen()
     })
+    this.debugButton = document.getElementById('debugButton')
+    this.debugButton.addEventListener('click', () => {
+      this.game.debug = !this.game.debug
+    })
   }
 
   update() {
