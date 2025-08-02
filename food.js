@@ -11,8 +11,11 @@ class Food {
     this.y = Math.floor(Math.random() * (this.game.rows - 2) + 2)
   }
   draw() {
-    this.game.ctx.fillStyle = 'white'
-    this.game.ctx.fillRect(this.x * this.game.cellSize, this.y * this.game.cellSize, this.game.cellSize, this.game.cellSize)
+    if (this.game.debug) {
+      this.game.ctx.fillStyle = 'white'
+      this.game.ctx.fillRect(this.x * this.game.cellSize, this.y * this.game.cellSize, this.game.cellSize, this.game.cellSize)
+    }
+    this.game.ctx.drawImage(this.image, this.x * this.game.cellSize, this.y * this.game.cellSize, this.game.cellSize, this.game.cellSize)
   }
   update() {
 
