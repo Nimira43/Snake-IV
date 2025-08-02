@@ -122,18 +122,18 @@ class Snake {
         segment.frameY = 3
       }
     } else if (index === this.segments.length - 1) {
-      if (segment.y < nextSegment.y) {
+      if (prevSegment.y < segment.y) {
         segment.frameX = 1
-        segment.frameY = 2
-      } else if (segment.y > nextSegment.y) {
-        segment.frameX = 0
         segment.frameY = 4
-      } else if (segment.x < nextSegment.x) {
-        segment.frameX = 4
+      } else if (prevSegment.y > segment.y) {
+        segment.frameX = 0
         segment.frameY = 2
-      } else if (segment.x > nextSegment.x) {
-        segment.frameX = 6
-        segment.frameY = 3
+      } else if (prevSegment.x < segment.x) {
+        segment.frameX = 2
+        segment.frameY = 0
+      } else if (prevSegment.x > segment.x) {
+        segment.frameX = 0
+        segment.frameY = 1
       }
     }
   }
