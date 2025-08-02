@@ -135,7 +135,7 @@ class Game {
     if (this.eventUpdate && !this.gameOver) {
       this.ctx.clearRect(0, 0, this.width, this.height)
       this.background.draw()
-      this.drawGrid()
+      if (this.debug) this.drawGrid()
       this.gameObjects.forEach(object => {
         object.draw()
         object.update()
