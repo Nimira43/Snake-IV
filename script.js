@@ -85,9 +85,10 @@ class Game {
     } else {
       this.gameOver = false
       this.gameUi.gameplayUi()
-      
-      
-      
+      this.initPlayer1()
+      this.initPlayer2()
+      this.initPlayer3()
+      this.initPlayer4()
       this.food = new Food(this)
       this.gameObjects = [this.player1, this.player2, this.player3, this.player4, this.food]
       this.ctx.clearRect(0, 0, this.width, this.height)
