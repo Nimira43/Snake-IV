@@ -4,7 +4,7 @@ class Game {
     this.ctx = context
     this.width
     this.height
-    this.cellSize = 50
+    this.cellSize = 80
     this.columns
     this.rows
     this.topMargin = 2
@@ -23,8 +23,14 @@ class Game {
     this.food
     this.background
     this.gameObjects
+    this.debug = false
     this.gameUi = new Ui(this)
     
+    window.addEventListener('keyup', e => {
+      if (e.key === '_') this.toggleFullScreen()
+      else if (e.key === '+') this.debug = !this.debug
+    })
+
     window.addEventListener('resize', e => {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
     })
