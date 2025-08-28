@@ -252,10 +252,11 @@ class Keyboard2 extends Snake {
 }
 
 class ComputerAi extends Snake {
-  constructor(game, x, y, speedX, speedY, colour, name) {
-    super(game, x, y, speedX, speedY, colour, name)
+  constructor(game, x, y, speedX, speedY, colour, name, image) {
+    super(game, x, y, speedX, speedY, colour, name, image)
     this.turnTimer = 0
-    this.turnInterval
+    this.ai_difficulty = document.getElementById('ai_difficulty').value
+    this.turnInterval = Math.floor(Math.random() * this.ai_difficulty)
   }
 
   update() {
