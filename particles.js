@@ -12,7 +12,10 @@ class Particle {
     this.free = true
   }
 
-  reset(){}
+  reset() {
+    this.free = true
+  }
+
   start(x, y, colour){}
   update(){}
   draw(){}
