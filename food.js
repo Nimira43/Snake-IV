@@ -25,6 +25,6 @@ class Food {
     this.game.ctx.drawImage(this.image, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x * this.game.cellSize, (this.y - 1) * this.game.cellSize, this.game.cellSize, this.game.cellSize * 2)
   }
   update() {
-
+    if (this.frameX < this.maxFrame) this.frameX++
   }
 }
