@@ -1,7 +1,7 @@
 class Particle {
-  constructor(){}
+  constructor(game){}
   reset(){}
-  start(){}
+  start(x, y, colour){}
   update(){}
   draw(){}
 }
