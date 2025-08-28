@@ -36,6 +36,12 @@ class Snake {
         this.score--
         colour = '#000'
         this.game.sound.play(this.game.sound.bad_food)
+        if (this.length > 2) {
+          this.length--
+          if (this.segments.length > this.length) {
+            this.segment.pop()
+          } 
+        }
       }
 
       this.game.food.reset()
