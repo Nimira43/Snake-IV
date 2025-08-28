@@ -281,6 +281,15 @@ class ComputerAi extends Snake {
     else if (food.y === this.y && food.x < this.y && this.speedX < 0) return
     else if (food.y === this.y && food.x > this.y && this.speedX > 0) return
     
+    if (food.x < this.x && this.speedX === 0) {
+      this.turnLeft()
+    } else if (food.x > this.x && this.speedX === 0) {
+      this.turnRight()
+    } else if (food.y < this.y && this.speedY === 0) {
+      this.turnUp()
+    } else if (food.y > this.y && this.speedY === 0) {
+      this.turnDown()
+    }
     
     
     
