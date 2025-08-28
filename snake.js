@@ -261,13 +261,17 @@ class ComputerAi extends Snake {
 
   update() {
     super.update()
-    if (this.turnTimer < this.turnInterval) {
-      this.turnTimer += 1
-    } else {
-      this.turnTimer = 0
+    if (this.x === this.game.food.x && this.speedY === 0 || this.y === this.game.food.y && this.speedX === 0) {
       this.turn()
-      this.turnInterval = Math.floor(Math.random() * 8) + 1
-    }
+    } else {
+      if (this.turnTimer < this.turnInterval) {
+      this.turnTimer += 1
+      } else {
+        this.turnTimer = 0
+        this.turn()
+        this.turnInterval = Math.floor(Math.random() * this.ai_difficulty)
+      }
+    }    
   }
 
   turn() {
