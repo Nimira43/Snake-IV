@@ -66,14 +66,15 @@ class Snake {
     if (this.moving) {
       this.x += this.speedX
       this.y += this.speedY
-      this.segments.unshift({x: this.x, y: this.y, frameX: 5, frame: 0})
+      this.segments.unshift({x: this.x, y: this.y, frameX: 5, frameY: 0})
       if (this.segments.length > this.length) {
         this.segments.pop()
       }
     }
 
     if (this.score >= this.game.winningScore) {
-      this.game.gameUi.triggerGameOver()
+      this.game.gameUi.triggerGameOver(this)
+      this.game.sound.play(this.game.sound.win)
     }
   }
   
