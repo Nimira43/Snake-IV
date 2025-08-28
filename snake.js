@@ -31,6 +31,13 @@ class Snake {
   update() {
     this.readyToTurn = true
     if (this.game.checkCollision(this, this.game.food)) {
+      let colour
+      if (this.game.food.frameY === 1) {
+        this.score--
+        colour = '#000'
+        this.game.sound.play(this.game.sound.bad_food)
+      }
+
       this.game.food.reset()
       this.score++
       this.length++
