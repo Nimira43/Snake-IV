@@ -289,14 +289,12 @@ class ComputerAi extends Snake {
       this.turnUp()
     } else if (food.y > this.y && this.speedY === 0) {
       this.turnDown()
-    }
-    
-    
-    
-    if (this.speedY === 0) {
-      Math.random() < 0.5 ? this.turnUp() : this.turnDown()
-    } else if (this.speedX === 0) {
-      Math.random() < 0.5 ? this.turnLeft() : this.turnRight()
+    } else {
+      if (this.speedY === 0) {
+        Math.random() < 0.5 ? this.turnUp() : this.turnDown()
+      } else if (this.speedX === 0) {
+        Math.random() < 0.5 ? this.turnLeft() : this.turnRight()
+      }
     }
   }
 }
