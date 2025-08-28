@@ -40,5 +40,13 @@ class Particle {
     }
   }
 
-  draw(){}
+  draw() {
+    if (!this.free) {
+      this.game.ctx2.fillStyle = this.colour
+      this.game.ctx2.beginPath()
+      this.game.ctx2.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+      this.game.ctx2.fill()
+      this.game.ctx2.stroke()
+    }
+  }
 }
