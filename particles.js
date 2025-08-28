@@ -27,6 +27,18 @@ class Particle {
     this.speedY = Math.random() * 5 - 2
   }
 
-  update(){}
+  update() {
+    if (!this.free) {
+      this.speedX *= 0.97
+      this.speedY -= 0.03
+      this.angle += this.va
+      this.x += Math.sin(this.angle) * this.speedX
+      this.y += this.speedY
+    
+      if (this.radius > 4) this.radius -= 0.1
+      else this.reset()
+    }
+  }
+
   draw(){}
 }
