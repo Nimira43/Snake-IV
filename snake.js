@@ -141,12 +141,30 @@ class Snake {
           segment.frameX = 1
           segment.frameY = 2
         } 
+      } else if (segment.y > nextSegment.y) {
+        if (this.game.food.y === segment.y + 1 && this.game.food.x === segment.x) {
+          segment.frameX = 7
+          segment.frameY = 3
+        } else {
+          segment.frameX = 0
+          segment.frameY = 4
+        }
       } else if (segment.x < nextSegment.x) {
-        segment.frameX = 4
-        segment.frameY = 2
+        if (this.game.food.x === segment.x - 1 && this.game.food.y === segment.y) {
+          segment.frameX = 2
+          segment.frameY = 4
+        } else {
+          segment.frameX = 0
+          segment.frameY = 0
+        }
       } else if (segment.x > nextSegment.x) {
-        segment.frameX = 6
-        segment.frameY = 3
+        if (this.game.food.x === segment.x + 1 && this.game.food.y === segment.y) {
+          segment.frameX = 4
+          segment.frameY = 4
+        } else {
+          segment.frameX = 2
+          segment.frameY = 1
+        }
       }
     } else if (index === this.segments.length - 1) {
       if (prevSegment.y < segment.y) {
