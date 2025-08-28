@@ -81,7 +81,7 @@ class Snake {
   draw() {
     this.segments.forEach((segment, i)  => {
       if (this.game.debug) {
-        if (i === 0) this.game.ctx.fillStyle = 'black'
+        if (i === 0) this.game.ctx.fillStyle = '#000000'
         else this.game.ctx.fillStyle = this.colour
         this.game.ctx.fillRect(segment.x * this.game.cellSize, segment.y * this.game.cellSize, this.width, this.height)
       }
