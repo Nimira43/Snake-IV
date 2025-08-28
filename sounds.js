@@ -12,5 +12,9 @@ class AudioControl {
     this.win = document.getElementById('win')
     this.button = document.getElementById('button')
   }
-  play(sound){}
+  
+  play(sound) {
+    sound.currentTime = 0
+    sound.play()
+  }
 }
