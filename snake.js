@@ -219,7 +219,7 @@ class Snake {
           segment.frameY = 2  
       } else {
         segment.frameX = 6
-        segment.frameY = 2  
+        segment.frameY = 0 
       }
     }
   }
