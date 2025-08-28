@@ -1,5 +1,5 @@
 class Snake {
-  constructor(game, x, y, speedX, speedY, colour, name) {
+  constructor(game, x, y, speedX, speedY, colour, name, image) {
     this.game = game
     this.x = x
     this.y = y
