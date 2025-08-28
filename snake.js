@@ -49,6 +49,13 @@ class Snake {
         this.game.sound.play(this.game.sound.biteSounds[Math.floor(Math.random() * this.game.sound.biteSounds.length)])
       }
       
+      for (let i = 0; i < 5; i++) {
+        const particle = this.game.getParticle()
+        if (particle) {
+          particle.start(this.game.food.x * this.game.cellSize + this.game.cellSize * 0.5, this.game.food.y * this.game.cellSize + this.game.cellSize * 0.5, colour)
+        }
+      }
+      this.game.food.reset()
     }
     if (this.x <= 0 && this.speedX < 0 ||
         this.x >= this.game.columns - 1 && this.speedX > 0 ||
