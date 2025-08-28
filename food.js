@@ -22,7 +22,7 @@ class Food {
       this.game.ctx.fillStyle = 'white'
       this.game.ctx.fillRect(this.x * this.game.cellSize, this.y * this.game.cellSize, this.game.cellSize, this.game.cellSize)
     }
-    this.game.ctx.drawImage(this.image, this.x * this.game.cellSize, this.y * this.game.cellSize, this.game.cellSize, this.game.cellSize)
+    this.game.ctx.drawImage(this.image, this.frameX * this.spriteWidth, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x * this.game.cellSize, (this.y - 1) * this.game.cellSize, this.game.cellSize, this.game.cellSize * 2)
   }
   update() {
 
