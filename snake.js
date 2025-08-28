@@ -239,8 +239,8 @@ class Keyboard1 extends Snake {
 }
 
 class Keyboard2 extends Snake {
-  constructor(game, x, y, speedX, speedY, colour, name) {
-    super(game, x, y, speedX, speedY, colour, name)
+  constructor(game, x, y, speedX, speedY, colour, name, image) {
+    super(game, x, y, speedX, speedY, colour, name, image)
     
     window.addEventListener('keydown', e => {
       if (e.key.toLowerCase() === 'q') this.turnUp()
