@@ -39,14 +39,16 @@ class Snake {
         if (this.length > 2) {
           this.length--
           if (this.segments.length > this.length) {
-            this.segment.pop()
+            this.segments.pop()
           } 
         }
+      } else {
+        this.score++
+        this.length++
+        colour = '#ffd700'
+        this.game.sound.play(this.game.sound.biteSounds[Math.floor(Math.random() * this.game.sound.biteSounds.length)])
       }
-
-      this.game.food.reset()
-      this.score++
-      this.length++
+      
     }
     if (this.x <= 0 && this.speedX < 0 ||
         this.x >= this.game.columns - 1 && this.speedX > 0 ||
