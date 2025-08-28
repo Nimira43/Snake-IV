@@ -134,11 +134,13 @@ class Snake {
 
     if (index === 0) {
       if (segment.y < nextSegment.y) {
-        segment.frameX = 1
-        segment.frameY = 2
-      } else if (segment.y > nextSegment.y) {
-        segment.frameX = 0
-        segment.frameY = 4
+        if (this.game.food.y === segment.y - 1 && this.game.food.x === segment.x) {
+          segment.frameX = 7
+          segment.frameY = 1
+        } else {
+          segment.frameX = 1
+          segment.frameY = 2
+        } 
       } else if (segment.x < nextSegment.x) {
         segment.frameX = 4
         segment.frameY = 2
