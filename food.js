@@ -4,6 +4,11 @@ class Food {
     this.x
     this.y
     this.image = document.getElementById('magic_berry1')
+    this.spriteWidth = 200
+    this.spriteHeight = 400
+    this.frameX
+    this.frameY
+    this.maxFrame = 8
     this.reset()
   }
   reset() {
