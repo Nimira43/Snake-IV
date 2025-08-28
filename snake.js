@@ -275,6 +275,15 @@ class ComputerAi extends Snake {
   }
 
   turn() {
+    const food = this.game.food
+    if (food.x === this.x && food.y < this.y && this.speedY < 0) return
+    else if (food.x === this.x && food.y > this.y && this.speedY > 0) return
+    else if (food.y === this.y && food.x < this.y && this.speedX < 0) return
+    else if (food.y === this.y && food.x > this.y && this.speedX > 0) return
+    
+    
+    
+    
     if (this.speedY === 0) {
       Math.random() < 0.5 ? this.turnUp() : this.turnDown()
     } else if (this.speedX === 0) {
