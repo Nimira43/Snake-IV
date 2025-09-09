@@ -14,10 +14,12 @@ class Ui {
     this.fullScreenButton = document.getElementById('fullScreenButton')
     this.fullScreenButton.addEventListener('click', () => {
       this.game.toggleFullScreen()
+      this.sound.play(this.game.sound.button)
     })
     this.debugButton = document.getElementById('debugButton')
     this.debugButton.addEventListener('click', () => {
       this.game.debug = !this.game.debug
+      this.game.sound.play(this.game.sound.button)
     })
     this.player1controls = document.getElementById('player1controls')
     this.player2controls = document.getElementById('player2controls')
@@ -27,6 +29,12 @@ class Ui {
     this.player2name = document.getElementById('player2name')
     this.player3name = document.getElementById('player3name')
     this.player4name = document.getElementById('player4name')
+    this.player1character = document.getElementById('player1character')
+    this.player2character = document.getElementById('player2character')
+    this.player3character = document.getElementById('player3character')
+    this.player4character = document.getElementById('player4character')
+    this.message1 = document.getElementById('message1')
+    this.message2 = document.getElementById('message2')
   }
 
   update() {
