@@ -178,6 +178,8 @@ class Game {
 
   render(deltaTime) {
     this.handlePeriodicEvents(deltaTime)
+
+    if (!this.gameOver) this.timer += deltaTime
     if (this.eventUpdate && !this.gameOver) {
       this.ctx.clearRect(0, 0, this.width, this.height)
       this.background.draw()
@@ -188,6 +190,7 @@ class Game {
       })
       this.gameUi.update()
     }
+    this.handleParticle()
   }
 }
 
