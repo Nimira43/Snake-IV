@@ -200,6 +200,11 @@ window.addEventListener('load', function () {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight;
   
+  const canvas2 = document.getElementById('canvas2')
+  const ctx2 = canvas2.getContext('2d')
+  canvas2.width = window.innerWidth
+  canvas2.height = window.innerHeight;
+  
   const game = new Game(canvas, ctx)
 
   let lastTime = 0
