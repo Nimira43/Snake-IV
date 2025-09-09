@@ -59,6 +59,9 @@ class Ui {
           particle.start(Math.random() * this.game.width, this.game.height * 0.9, 'gold')
         }
       }
+    } else {
+      this.message1.innerText = 'Snake IV'
+      this.message2.innerText = 'Choose your player...'
     }
   }
 
