@@ -100,8 +100,11 @@ class Game {
   start() {
     if (!this.gameOver) {
       this.gameUi.triggerGameOver()
+      this.sound.play(this.sound.restart)
     } else {
+      this.sound.play(this.sound.start)
       this.gameOver = false
+      this.timer = 0
       this.gameUi.gameplayUi()
       this.initPlayer1()
       this.initPlayer2()
