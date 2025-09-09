@@ -155,6 +155,10 @@ class Game {
     }
   }
 
+  createParticlePool() {}
+  getParticle() {}
+  handleParticle() {}
+
   render(deltaTime) {
     this.handlePeriodicEvents(deltaTime)
     if (this.eventUpdate && !this.gameOver) {
