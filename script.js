@@ -43,7 +43,7 @@ class Game {
       this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight)
     })
     this.resize(window.innerWidth, window.innerHeight)
-    this.start()
+    // this.start()
   }
 
   resize(width, height) {
@@ -52,6 +52,12 @@ class Game {
     this.ctx.fillStyle = '#ff4500'
     this.ctx.font = '30px Impact'
     this.ctx.textBaseline = 'top'
+
+    this.canvas2.width = this.canvas.width
+    this.canvas2.height = this.canvas.height
+    this.ctx.fillStyle = '#ffd700'
+    this.ctx.lineWidth = 2
+
     this.width = this.canvas.width
     this.height = this.canvas.height
     this.columns = Math.floor(this.width / this.cellSize)
