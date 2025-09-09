@@ -199,13 +199,13 @@ window.addEventListener('load', function () {
   const ctx = canvas.getContext('2d')
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight;
-  
+
   const canvas2 = document.getElementById('canvas2')
   const ctx2 = canvas2.getContext('2d')
   canvas2.width = window.innerWidth
   canvas2.height = window.innerHeight;
   
-  const game = new Game(canvas, ctx)
+  const game = new Game(canvas, ctx, canvas2, ctx2)
 
   let lastTime = 0
 
