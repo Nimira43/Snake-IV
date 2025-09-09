@@ -92,8 +92,9 @@ class Game {
   }
 
   initPlayer4() {
+    const image = document.getElementById(this.gameUi.player4character.value)
     const name = this.gameUi.player4name.value
-    this.player4 = new ComputerAi(this, 0, this.rows - 1, 0, -1, '#18ff45', name)
+    this.player4 = new ComputerAi(this, 0, this.rows - 1, 0, -1, '#18ff45', name, image)
   }
 
   start() {
