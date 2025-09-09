@@ -133,6 +133,10 @@ class Game {
     return a.x === b.x && a.y === b.y
   }
 
+  formatTimer() {
+    return (this.timer * 0.001).toFixed(1)
+  }
+
   toggleFullScreen() {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen()
