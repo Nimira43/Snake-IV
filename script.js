@@ -76,6 +76,7 @@ class Game {
   }
   
   initPlayer2() {
+    const image = document.getElementById(this.gameUi.player2character.value)
     const name = this.gameUi.player2name.value
     if (this.gameUi.player2controls.value === 'qart') {
       this.player2 = new Keyboard2(this, this.columns - 1, this.topMargin, 0, 1, '#49c0ee', name)
