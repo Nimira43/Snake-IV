@@ -161,7 +161,13 @@ class Game {
     }
   }
 
-  getParticle() {}
+  getParticle() {
+    for (let i = 0; i < this.particles.length; i++) {
+      if (this.particles[i].free) return this.particles[i]
+    }
+  }
+
+
   handleParticle() {}
 
   render(deltaTime) {
