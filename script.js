@@ -32,7 +32,7 @@ class Game {
 
     this.particles = []
     this.numberOfParticles = 50
-    this.createPArticlePool()
+    this.createParticlePool()
     
     window.addEventListener('keyup', e => {
       if (e.key === '_') this.toggleFullScreen()
@@ -157,7 +157,7 @@ class Game {
 
   createParticlePool() {
     for (let i = 0; i < this.numberOfParticles; i++) {
-      this.particles.push(new this.particles(this))
+      this.particles.push(new Particle(this))
     }
   }
 
