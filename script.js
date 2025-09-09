@@ -1,7 +1,9 @@
 class Game {
-  constructor(canvas, context) {
+  constructor(canvas, context, canvas2, context2) {
     this.canvas = canvas
     this.ctx = context
+    this.canvas2 = canvas2
+    this.ctx2 = context2
     this.width
     this.height
     this.cellSize = 80
@@ -12,6 +14,7 @@ class Game {
     this.eventTimer = 0
     this.eventInteval = 200
     this.eventUpdate = false
+    this.timer
 
     this.gameOver = true
     this.winningScore = 2
@@ -25,6 +28,11 @@ class Game {
     this.gameObjects
     this.debug = false
     this.gameUi = new Ui(this)
+    this.sound = new AudioControl()
+
+    this.particles = []
+    this.numberOfParticles = 50
+    this.createPArticlePool()
     
     window.addEventListener('keyup', e => {
       if (e.key === '_') this.toggleFullScreen()
