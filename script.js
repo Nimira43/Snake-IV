@@ -155,7 +155,12 @@ class Game {
     }
   }
 
-  createParticlePool() {}
+  createParticlePool() {
+    for (let i = 0; i < this.numberOfParticles; i++) {
+      this.particles.push(new this.particles(this))
+    }
+  }
+
   getParticle() {}
   handleParticle() {}
 
