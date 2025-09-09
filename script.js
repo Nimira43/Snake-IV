@@ -66,11 +66,12 @@ class Game {
   }
 
   initPlayer1() {
+    const image = document.getElementById(this.gameUi.player1character.value)
     const name = this.gameUi.player1name.value
     if (this.gameUi.player1controls.value === 'arrows') {
-      this.player1 = new Keyboard1(this, 0, this.topMargin, 1, 0, '#ff4500', name)
+      this.player1 = new Keyboard1(this, 0, this.topMargin, 1, 0, '#ff4500', name, image)
     } else {
-      this.player1 = new ComputerAi(this, 0, this.topMargin, 1, 0, '#ff4500', name)
+      this.player1 = new ComputerAi(this, 0, this.topMargin, 1, 0, '#ff4500', name, image)
     }
   }
   
