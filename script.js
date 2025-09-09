@@ -79,15 +79,16 @@ class Game {
     const image = document.getElementById(this.gameUi.player2character.value)
     const name = this.gameUi.player2name.value
     if (this.gameUi.player2controls.value === 'qart') {
-      this.player2 = new Keyboard2(this, this.columns - 1, this.topMargin, 0, 1, '#49c0ee', name)
+      this.player2 = new Keyboard2(this, this.columns - 1, this.topMargin, 0, 1, '#49c0ee', name, image)
     } else {
-      this.player2 = new ComputerAi(this, this.columns - 1, this.topMargin, 0, 1, '#49c0ee', name)
+      this.player2 = new ComputerAi(this, this.columns - 1, this.topMargin, 0, 1, '#49c0ee', name, image)
     }
   }
   
   initPlayer3() {
+    const image = document.getElementById(this.gameUi.player3character.value)
     const name = this.gameUi.player3name.value
-      this.player3 = new ComputerAi(this, this.columns - 1, this.rows - 1, -1, 0, '#ffd700', name)      
+      this.player3 = new ComputerAi(this, this.columns - 1, this.rows - 1, -1, 0, '#ffd700', name, image)      
   }
 
   initPlayer4() {
