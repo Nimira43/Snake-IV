@@ -12,7 +12,7 @@ class Game {
     this.topMargin = 2
   
     this.eventTimer = 0
-    this.eventInteval = 200
+    this.eventInterval = 200
     this.eventUpdate = false
     this.timer
 
@@ -146,7 +146,7 @@ class Game {
   }
 
   handlePeriodicEvents(deltaTime) {
-    if (this.eventTimer < this.eventInteval) {
+    if (this.eventTimer < this.eventInterval) {
       this.eventTimer += deltaTime
       this.eventUpdate = false
     } else {
